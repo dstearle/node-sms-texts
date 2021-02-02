@@ -23,7 +23,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
 
     res.render('index');
-    
+
+});
+
+// Catch form submit
+app.post('/', (req, res) => {
+
+    res.send(req.body);
+
+    console.log(req.body);
+
 });
 
 // Define Port
