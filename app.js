@@ -5,6 +5,14 @@ const ejs = require('ejs');
 const Nexmo = require('nexmo');
 const socketio = require('socket.io');
 
+// Initiates Nexmo
+const nexmo = new Nexmo({
+
+    apiKey: '',
+    apiSecret: '',
+
+}, {debug: true});
+
 // Initiates express
 const app = express();
 
