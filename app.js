@@ -8,12 +8,12 @@ const socketio = require('socket.io');
 // Initiates Nexmo
 const nexmo = new Nexmo({
 
-    apiKey: '',
-    apiSecret: '',
+    apiKey: process.env.NEXMO_API_KEY,
+    apiSecret: process.env.NEXMO_API_SECRET,
 
 }, {debug: true});
 
-// Initiates express
+// Initiates Express
 const app = express();
 
 // Template engine setup
