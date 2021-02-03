@@ -68,6 +68,19 @@ app.post('/', (req, res) => {
 
                 console.dir(responseData);
 
+                // Get data from the response
+                const data = {
+
+                    // Response ID
+                    id: responseData.messages[0]['message-id'],
+                    // Response Phone Number
+                    number: responseData.messages[0]['to']
+
+                }
+
+                // Emit the data information to the client
+                io.emit('smsStatus', data);
+
             }
 
         }
@@ -95,5 +108,5 @@ io.on('connection', (socket) => {
         console.log('Disconnected...');
 
     });
-    
+
 });
