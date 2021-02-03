@@ -5,6 +5,9 @@ const ejs = require('ejs');
 const Nexmo = require('nexmo');
 const socketio = require('socket.io');
 
+// Initiates dotenv variables
+require('dotenv').config();
+
 // Initiates Nexmo
 const nexmo = new Nexmo({
 
