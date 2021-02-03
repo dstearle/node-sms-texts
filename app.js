@@ -81,3 +81,19 @@ const port = 3000;
 
 // Start Server
 const server = app.listen(port, () => console.log(`Server started on port ${ port }`),);
+
+// Connect to socket.io
+const io = socketio(server);
+io.on('connection', (socket) => {
+
+    // Inform terminal of connection
+    console.log('Connected...');
+
+    // Inform terminal of disconnection
+    io.on('disconnect', () => {
+
+        console.log('Disconnected...');
+
+    });
+    
+});
