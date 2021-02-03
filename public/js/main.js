@@ -10,6 +10,17 @@ respone = document.querySelector('.response');
 // Event listener for the submit button
 button.addEventListener('click', send, false);
 
+// Socket IO
+const socket = io();
+
+// The status of the submitted text message
+socket.on('smsStatus', function(data) {
+
+    // The success message on the ui
+    respone.innerHTML = '<h5>Text message sent to ' + data.number + '</h5>';
+
+});
+
 // Sends a text message from the inputs
 function send() {
 
