@@ -10,4 +10,5 @@
 
 **Notes:**
 
-- To run the application use "npm run start"
+- To run the application use "npm run start".
+- View application locally at "http://localhost:3000/".
